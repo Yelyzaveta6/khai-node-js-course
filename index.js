@@ -18,10 +18,8 @@ app.get('/', (request, response) => {
 // Route with a route parameter to get products by brand
 app.get('/products/:brand', (req, res) => {
     const { brand } = req.params; // Access the brand parameter from the URL
-  
     // Filter products based on the brand parameter
     const filteredProducts = products.filter(product => product.brand === brand);
-  
     res.json(filteredProducts); // Send the filtered products as a JSON response
   });
 
@@ -29,5 +27,3 @@ app.get('/products/:brand', (req, res) => {
 app.listen(3000, 
    () => console.log(`server start at http://localhost:/`));
 
-   /* node index.js */
-  /*  ${port} */
